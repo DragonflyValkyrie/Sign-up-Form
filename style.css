@@ -1,7 +1,99 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+    .image-container {
+        display: none;
+    } 
+    
+    .content-container {
+        background-image: url(images/vision_of_the_gas_giant.jpg);
+        background-size: cover;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        filter: brightness(50%);
+    }
+}
+
+.image-container {
+    flex: 1;
+    background-image: url(images/vision_of_the_gas_giant.jpg);
+    background-size: cover;
+    height: auto;
+}
+
+.content-container {
+    flex: 2;
+    
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper {
+    flex: 1;
+    position: relative;
+    margin: 20px;
+  }
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    cursor: text;
+    transition: 0.3s ease-in-out;
+}
+
+input, label {
+    font-size: 1em;
+    width: 250px;
+    height: 35px;
+}
+.input-wrapper:focus-within label,
+form input:focus + label, 
+input:valid + label{
+    top: -25px;
+    font-size: 0.75em;
+    pointer-events: none;
+  }
+
+input:focus,
+input:valid {
+    outline: none;
+    border: 4px solid #a3eff7;
+}
+input {
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 3px solid #dfdfdf;
+}
+
+input:invalid {
+    border-color: red;
+  }
+
+button {
+    margin: 20px;
+    background: #33747d;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    font-size: larger;
+    
 }
 
 a {

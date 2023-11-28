@@ -7,37 +7,55 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <h1>This is a demo registration page!</h1>
-    <h2>Don't just dream it, live it. Chart your 
-        course among the stars and be at the forefront of humanity's leap into a 
-        new era of exploration</h2>
+    <div class="image-container"></div>
 
-    <form>
-        <h2>I am ready</h2>
-        <p>Fields marked with an asterisk (*) are required</p>
-        
-        <label for="first-name"></label>
-        <input name="first-name" type="text" id="first-name" placeholder="First Name" required>
+    <div class="content-container">
+        <h1>This is a demo registration page!</h1>
+        <h2>Don't just dream it, live it. Chart your 
+            course among the stars and be at the forefront of humanity's leap into a 
+            new era of exploration</h2>
 
-        <label for="last-name"></label>
-        <input name="last-name" type="text" id="last-name" placeholder="Last Name" required>
+        <form>
+            <h2>Let's do this!</h2>
+            
+            <div class="form-container">
+                <div class="input-wrapper">
+                    <label for="first-name">First Name</label>
+                    <input name="first-name" type="text" id="first-name" required>
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="last-name">Last Name</label>
+                    <input name="last-name" type="text" id="last-name" required>
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"  required>
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" required>
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                </div>
 
-        <label for="password"></label>
-        <input type="password" name="password" id="password" placeholder="Password" required>
+                <div class="button-container">
+                    <button type="submit">Create Account</button>
 
-        <label for="confirm-password"></label>
-        <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
-
-        <label for="email"></label>
-        <input type="email" name="email" id="email" placeholder="Email" required>
-
-        <label for="phone"></label>
-        <input type="tel" name="phone" id="phone" placeholder="Phone Number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
-
-
-        <button type="submit">Create Account</button>
-
-        <p>Already have an account? <a href="url">Log in</a></p>
-    </form>
+                    <p>Already have an account? <a href="url">Log in</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
