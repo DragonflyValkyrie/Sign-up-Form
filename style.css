@@ -3,22 +3,22 @@ body {
     padding: 0;
     height: 100vh;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif, Impact, 'Arial Narrow Bold';
+    background-color: #181818;
+    color: white;
 }
 
 @media only screen and (max-width: 800px) {
     .image-container {
-        display: none;
+        display: none !important;
     } 
     
     .content-container {
         background-image: url(images/vision_of_the_gas_giant.jpg);
         background-size: cover;
         height: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        filter: brightness(50%);
     }
+
 }
 
 .image-container {
@@ -26,13 +26,45 @@ body {
     background-image: url(images/vision_of_the_gas_giant.jpg);
     background-size: cover;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 250px;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
 }
 
 .content-container {
     flex: 2;
+    padding-top: 50px;
     
 }
 
+.head-container {
+    padding: 0px 25px;
+    margin-bottom: 50px;
+}
+
+form {
+    background-color:#202020;
+    padding: 10px 25px;
+    box-shadow: 5px 5px 5px black;
+}
 .form-container {
     display: flex;
     flex-direction: row;
@@ -40,6 +72,7 @@ body {
     gap: 25px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .input-wrapper {
@@ -50,52 +83,63 @@ body {
 
 label {
     position: absolute;
-    top: 0;
+    top: -25px;
     left: 0;
     display: flex;
     align-items: center;
     cursor: text;
-    transition: 0.3s ease-in-out;
 }
 
-input, label {
-    font-size: 1em;
-    width: 250px;
+input, 
+label {
+    font-size: 0.75rem;
+    width: 200px;
     height: 35px;
 }
-.input-wrapper:focus-within label,
-form input:focus + label, 
-input:valid + label{
-    top: -25px;
-    font-size: 0.75em;
-    pointer-events: none;
-  }
 
-input:focus,
-input:valid {
-    outline: none;
-    border: 4px solid #a3eff7;
-}
 input {
-    border-radius: 5px;
     border: 0;
     border-bottom: 3px solid #dfdfdf;
+    background-color: #303030;
+    color: white;
 }
 
 input:invalid {
     border-color: red;
-  }
+}
+
+input:focus {
+    border: 0;
+    outline: 0;
+    border-bottom: 3px solid #dfdfdf;
+}
+
+input:valid {
+    outline: none;
+    border: 3px solid #33747d;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-left: 25px;
+}
 
 button {
-    margin: 20px;
+    border: none;
     background: #33747d;
     border-radius: 10px;
     color: white;
     padding: 10px 25px;
-    font-size: larger;
-    
+    font-size: 18px;
+    width: fit-content;
+    margin: 10px 0px;
+    cursor: pointer;
 }
 
 a {
+    color: #33747d;
     text-decoration: none;
 }

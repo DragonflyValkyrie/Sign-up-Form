@@ -7,13 +7,22 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <div class="image-container"></div>
+    <div class="image-container">
+        <div class="logo">
+            <a href="#">
+                <img src="images/rocket-logo.jpg" alt="Rocket Logo">
+            </a>
+        </div>
+    </div>
 
     <div class="content-container">
-        <h1>This is a demo registration page!</h1>
-        <h2>Don't just dream it, live it. Chart your 
-            course among the stars and be at the forefront of humanity's leap into a 
-            new era of exploration</h2>
+        <div class="head-container">
+            <h1>This is a demo registration page!</h1>
+            <h2>Don't just dream it, <em>live</em> it. Chart your 
+                course among the stars and be at the forefront of humanity's leap into a 
+                <em>new era of <strong>exploration</strong></em>
+            </h2>
+        </div>
 
         <form>
             <h2>Let's do this!</h2>
@@ -31,9 +40,14 @@
             
                 <div class="input-wrapper">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email"  required>
+                    <input type="email" name="email" id="email" required>
                 </div>
-            
+
+                <div class="input-wrapper">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                </div>
+
                 <div class="input-wrapper">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required>
@@ -43,19 +57,13 @@
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" name="confirm-password" id="confirm-password" required>
                 </div>
-            
-                <div class="input-wrapper">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone" id="phone" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
-                </div>
-
-                <div class="button-container">
-                    <button type="submit">Create Account</button>
-
-                    <p>Already have an account? <a href="url">Log in</a></p>
-                </div>
             </div>
-        </form>
+        </form>   
+        
+        <div class="button-container">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="url">Log in</a></p>
+        </div>
     </div>
 </body>
 </html>
